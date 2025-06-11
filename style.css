@@ -6,6 +6,7 @@ section {
     display: flex;
     padding: 0 7vw;
     align-items: center;
+    background-attachment: fixed;
 
     h1 {
         color: white;
@@ -78,7 +79,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .card {
@@ -86,16 +86,17 @@ section {
     display: flex;
     flex-direction: column;
     width: 304px;
+    position: relative;
 
     .img {
         border-bottom: 1px solid #6F4E37;
+        width: 100%;
     }
 
     p {
         font-family: "Arsenal SC";
         font-size: 17px;
         font-weight: 400;
-        color: black;
     }
 
     button {
@@ -112,11 +113,17 @@ section {
 
 .container {
     display: flex;
-    gap: 2vw;
+    justify-content: space-between;
+    gap: 1.5vw;
+    flex-wrap: wrap;
 }
 
 .menu {
     padding: 7vw 7vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
 }
 
 .fill {
@@ -125,3 +132,212 @@ section {
     flex-direction: column;
     gap: 21px;
 }
+
+.heart,
+.heart_ {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.img_block {
+    position: relative;
+}
+
+.unactive {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7vw 7vw 0;
+    gap: 50px;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    background-color: #ACD0D6;
+    height: 272px;
+    gap: 20px;
+    padding: 20px;
+    min-width: 49%;
+}
+
+.slider_container {
+    backdrop-filter: blur(10px);
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    gap: 2%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2%;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    max-width: 86vw;
+}
+
+#button_next {
+    transform: scaleX(-1);
+    right: 7vw;
+}
+
+#button_back {
+    left: 7vw;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        font-family: "Arsenal SC";
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ACD0D6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: #6F4E37;
+}
+
+
+
+
+
+
+
+
+
+
+.contacts {
+    display: flex;
+    padding: 7vw;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+.about_coffeetary {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#map {
+    width: 50vw; 
+    height: 450px;
+}
+
+
+
+
+
+
+
+
+
+.questions {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/assets/images/questions.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 6vw 7vw;
+
+    h2 {
+        color: white;
+    }
+
+    input, textarea {
+        background-color: white;
+        padding: 15px 20px;
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+        border: none;
+    }
+
+    textarea {
+        height: 125px;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #9A9A9A;
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    button {
+        margin-top: 10px;
+        color: black;
+        background-color: #ACD0D6;
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+        border: none;
+        padding: 10px 22px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 50%;
+    }
+}
+
+

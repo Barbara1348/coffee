@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Кофейня "Небо и Земля"</title>
     <link rel="stylesheet" href="/assets/index.html">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style.css">
@@ -12,14 +12,26 @@
 
 <body>
     <header>
-        <img src="/assets/images/logo.svg" alt="Логотип кофейни">
+        <a href="index.html">
+            <img src="/assets/images/logo.svg" alt="Логотип кофейни">
+        </a>
         <nav>
             <ul>
-                <li>О нас</li>
-                <li>Меню</li>
-                <li>Отзывы</li>
-                <li>Контакты</li>
-                <li>Вопросы</li>
+                <a href="#section1">
+                    <li>О нас</li>
+                </a>
+                <a href="#section2">
+                    <li>Меню</li>
+                </a>
+                <a href="#section3">
+                    <li>Отзывы</li>
+                </a>
+                <a href="#section4">
+                    <li>Контакты</li>
+                </a>
+                <a href="#section5">
+                    <li>Вопросы</li>
+                </a>
             </ul>
             <img src="/assets/images/bag.svg" alt="Корзина">
             <img src="/assets/images/account.svg" alt="Личный кабинет">
@@ -29,10 +41,11 @@
     <main>
 
         <section>
-            <h1>Окунитесь в мир ароматного и насыщенного кофе вместе с кофейней “Небо и Земля”!</h1>
+            <h1 data-rellax-speed="3">Окунитесь в мир ароматного и насыщенного кофе вместе с кофейней “Небо и Земля”!
+            </h1>
         </section>
 
-        <div class="about_us">
+        <div class="about_us" id="section1">
             <div class="about">
                 <h2>О нас</h2>
                 <div class="text_about_us">
@@ -50,12 +63,20 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+        <script src="/home/parallax.js"></script>
 
-        <div class="menu">
+        <div class="menu" id="section2">
             <h2>Меню</h2>
             <div class="container">
                 <div class="card">
-                    <img class="img" src="/assets/images/espresso.png" alt="Эспрессо">
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/espresso.png" alt="Эспрессо">
+                        <img class="heart" id="card_1" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(1)">
+                        <img class="heart_" id="card_1_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(1)">
+                    </div>
                     <div class="fill">
                         <div class="name">
                             <h3>Эспрессо</h3>
@@ -70,50 +91,329 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/assets/images/espresso.png" alt="Эспрессо">
-                    <div class="name">
-                        <h3>Эспрессо</h3>
-                        <div>
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                        </div>
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/americano.png" alt="Эспрессо">
+                        <img class="heart" id="card_2" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(2)">
+                        <img class="heart_" id="card_2_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(2)">
                     </div>
-                    <p>Насыщенный напиток, который идеален для любителей крепкого кофе.Насыщенный напиток, который
-                        идеален для любителей крепкого кофе.</p>
-                    <button>Подробнее</button>
+                    <div class="fill">
+                        <div class="name">
+                            <h3>Американо</h3>
+                            <div>
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                            </div>
+                        </div>
+                        <p>Элегантный кофейный напиток, его крепкий вкус сбалансирован нежной текстурой.</p>
+                        <button>Подробнее</button>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="/assets/images/espresso.png" alt="Эспрессо">
-                    <div class="name">
-                        <h3>Эспрессо</h3>
-                        <div>
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                        </div>
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/capuccino.png" alt="Эспрессо">
+                        <img class="heart" id="card_3" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(3)">
+                        <img class="heart_" id="card_3_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(3)">
                     </div>
-                    <p>Насыщенный напиток, который идеален для любителей крепкого кофе.Насыщенный напиток, который
-                        идеален для любителей крепкого кофе.</p>
-                    <button>Подробнее</button>
+                    <div class="fill">
+                        <div class="name">
+                            <h3>Капучино</h3>
+                            <div>
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                            </div>
+                        </div>
+                        <p>Совершенное сочетание эспрессо, горячего молока и густой молочной пены.</p>
+                        <button>Подробнее</button>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="/assets/images/espresso.png" alt="Эспрессо">
-                    <div class="name">
-                        <h3>Эспрессо</h3>
-                        <div>
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                            <img src="/assets/images/zerno.svg" alt="Степень крепости">
-                        </div>
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/latte.png" alt="Эспрессо">
+                        <img class="heart" id="card_4" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(4)">
+                        <img class="heart_" id="card_4_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(4)">
                     </div>
-                    <p>Насыщенный напиток, который идеален для любителей крепкого кофе.Насыщенный напиток, который
-                        идеален для любителей крепкого кофе.</p>
-                    <button>Подробнее</button>
+                    <div class="fill">
+                        <div class="name">
+                            <h3>Латте</h3>
+                            <div>
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                            </div>
+                        </div>
+                        <p>Нежный и сливочный напиток на основе эспрессо и взбитом молоке, покрытого легкой пенкой.</p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/raf.png" alt="Эспрессо">
+                        <img class="heart" id="card_5" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(5)">
+                        <img class="heart_" id="card_5_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(5)">
+                    </div>
+                    <div class="fill">
+                        <div class="name">
+                            <h3>Раф</h3>
+                            <div>
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                            </div>
+                        </div>
+                        <p>Его мягкий вкус и сладковатый аромат подойдут для любителей более нежного кофе.</p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/hot_chocolate.png" alt="Эспрессо">
+                        <img class="heart" id="card_6" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(6)">
+                        <img class="heart_" id="card_6_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(6)">
+                    </div>
+                    <div class="fill">
+                        <h3>Горячий шоколад</h3>
+                        <p>Уютный и согревающий напиток, приготовленный из шоколада с добавлением молока.</p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/ice_capuccino.png" alt="Эспрессо">
+                        <img class="heart" id="card_7" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(7)">
+                        <img class="heart_" id="card_7_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(7)">
+                    </div>
+                    <div class="fill">
+                        <div class="name">
+                            <h3>Айс капучино</h3>
+                            <div>
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                            </div>
+                        </div>
+                        <p>Освежающий вариант капучино с холодным молоком и ледяными кубиками.</p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img_block">
+                        <img class="img" src="/assets/images/ice_latte.png" alt="Эспрессо">
+                        <img class="heart" id="card_8" src="/assets/images/heart.svg" alt="Поставить лайк"
+                            onclick="heart(8)">
+                        <img class="heart_" id="card_8_active" src="/assets/images/heart_active.svg"
+                            alt="Поставить лайк" onclick="heart(8)">
+                    </div>
+                    <div class="fill">
+                        <div class="name">
+                            <h3>Айс латте</h3>
+                            <div>
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                                <img src="/assets/images/zerno.svg" alt="Степень крепости">
+                            </div>
+                        </div>
+                        <p>Освежающий напиток на основе эспрессо и холодного молока, подается с ледяными кубиками.</p>
+                        <button>Подробнее</button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="feedback" id="section3">
+            <h2>Отзывы</h2>
+            <div class="slider">
+                <img src="/assets/images/arrow.svg" alt="Стрелка назад" id="button_back">
+                <div class="slider_container">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="/assets/images/photo_feedback1.png" alt="Фото клиента">
+                            <div class="info">
+                                <div>
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                </div>
+                                <h3>Иванова Екатерина</h3>
+                                <p>Интерьер кофейни очень стильный и уютный. Я часто хожу сюда с подругами, чтобы
+                                    поболтать
+                                    и насладиться выпечкой.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/photo_feedback2.png" id="button_back" alt="Фото клиента">
+                            <div class="info">
+                                <div>
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                </div>
+                                <h3>Макаров Николай</h3>
+                                <p>Я в восторге от их эспрессо — крепкий, ароматный и с идеальной пенкой. Атмосфера
+                                    здесь
+                                    просто уникальная.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/photo_feedback3.png" id="button_back" alt="Фото клиента">
+                            <div class="info">
+                                <div>
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                </div>
+                                <h3>Балакина Варвара</h3>
+                                <p>Потрясающий капучино с нежнейшей молочной пенкой и идеальным балансом вкусов.
+                                    Интерьер в стиле лофт создаёт особую творческую атмосферу, в которой хочется
+                                    оставаться часами.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/photo_feedback4.png" id="button_back" alt="Фото клиента">
+                            <div class="info">
+                                <div>
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                </div>
+                                <h3>Скворцова Александра</h3>
+                                <p>Бариста настоящие профессионалы - чувствуется их любовь к кофе в каждой чашке. Уютное
+                                    место с душевной атмосферой.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/photo_feedback5.png" id="button_back" alt="Фото клиента">
+                            <div class="info">
+                                <div>
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                </div>
+                                <h3>Муратов Тимур</h3>
+                                <p>Атмосфера настолько расслабляющая, что даже в час пик здесь чувствуешь себя комфортно
+                                    и уединённо.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/images/photo_feedback6.png" id="button_back" alt="Фото клиента">
+                            <div class="info">
+                                <div>
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                    <img src="/assets/images/star.svg" alt="Звезда">
+                                </div>
+                                <h3>Кочевников Никита</h3>
+                                <p>Обожаю их фирменный латте на фундучном молоке - насыщенный вкус с тонкими ореховыми
+                                    нотками. В кофейне царит какая-то особенная тёплая атмосфера, будто приходишь в
+                                    гости к старым друзьям.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/images/arrow.svg" id="button_next" alt="Стрелка вперед">
+            </div>
+            <div class="dots"></div>
+        </div>
+
+        <div class="contacts" id="section4">
+            <div class="about_coffeetary">
+                <h2>Контакты</h2>
+                <div class="contact_info">
+                    <div>
+                        <p>График работы:</p>
+                        <p>ежедневно 8:00 - 21:00</p>
+                    </div>
+                    <div>
+                        <p>Адрес:</p>
+                        <p>г. Оренбург, ул. Советская, 37</p>
+                    </div>
+                    <div>
+                        <p>Телефон:</p>
+                        <p>46-05-32</p>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <div class="questions" id="section5">
+            <h2>Вопросы</h2>
+            <form action="">
+                <input type="email" placeholder="Введите email">
+                <textarea type="text" name="" id="" placeholder="Введите вопрос"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
     </main>
+
+    <footer>
+        <a href="index.html">
+            <img src="/assets/images/logo_footer.svg" alt="Логотип кофейни">
+        </a>
+        <nav>
+            <div>
+                <ul>
+                    <a href="#section1">
+                        <li>О нас</li>
+                    </a>
+                    <a href="#section2">
+                        <li>Меню</li>
+                    </a>
+                    <a href="#section3">
+                        <li>Отзывы</li>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="#section4">
+                        <li>Контакты</li>
+                    </a>
+                    <a href="#section5">
+                        <li>Вопросы</li>
+                    </a>
+                </ul>
+            </div>
+            <ul>
+                <li>Пользовательское соглашение</li>
+                <li>Политика конфиденциальности</li>
+            </ul>
+        </nav>
+        <div class="social_media">
+            <li>Мы в социальных сетях</li>
+            <div>
+                <a href="https://t.me/iambrr_queeq">
+                    <img class="img" src="/assets/images/telegram.svg" alt="Телеграм">
+                </a>
+                <a href="https://ok.ru/group/63933838524479">
+                    <img class="img" src="/assets/images/odnoklassniki.svg" alt="Одноклассники">
+                </a>
+                <a href="https://vk.ru/br_qq">
+                    <img class="img" src="/assets/images/vk.svg" alt="ВКонтакте">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/home/heart.js"></script>
+    <script src="/home/slider.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
+    <script src="/home/map.js"></script>
 </body>
 
 </html>

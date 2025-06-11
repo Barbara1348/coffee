@@ -17,9 +17,13 @@
 
 header {
     display: flex;
-    background-color: #EDE4CC;
+    background-color: rgba(237, 228, 204, 0.8);
     padding: 1vw 7vw;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(3px);
 }
 
 nav {
@@ -61,16 +65,82 @@ h2 {
     font-family: "Arsenal SC";
     font-size: 45px;
     font-weight: 400;
-    color: black;
 }
 
 h3 {
     font-family: "Arsenal SC";
     font-size: 25px;
     font-weight: 400;
-    color: black;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #6F4E37;
+    padding: 3vw 7vw;
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        align-items: baseline;
+        gap: 10vw;
+
+        div {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 4px;
+            margin-right: 0;
+            flex-direction: column;
+
+            li {
+                font-size: 25px;
+                font-family: "Arsenal SC";
+                color: white;
+            }
+        }
+    }
+
+    li {
+        font-size: 25px;
+        font-family: "Arsenal SC";
+        color: white;
+        list-style: none;
+    }
+
+    .img:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+    }
+}
+
+.social_media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+}
 
 
 
