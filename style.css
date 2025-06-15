@@ -301,7 +301,7 @@ section {
         color: white;
     }
 
-    input, textarea {
+    textarea {
         background-color: white;
         padding: 15px 20px;
         font-family: "Arsenal SC";
@@ -313,31 +313,10 @@ section {
     textarea {
         height: 125px;
     }
+}
 
-    input::placeholder, textarea::placeholder {
-        color: #9A9A9A;
-        font-family: "Arsenal SC";
-        font-size: 25px;
-        font-weight: 400;
-    }
-
-    button {
-        margin-top: 10px;
-        color: black;
-        background-color: #ACD0D6;
-        font-family: "Arsenal SC";
-        font-size: 25px;
-        font-weight: 400;
-        border: none;
-        padding: 10px 22px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 50%;
-    }
+form { 
+    max-width: 50%;
 }
 
 

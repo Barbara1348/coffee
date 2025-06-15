@@ -90,6 +90,49 @@ a:hover {
 
 
 
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input::placeholder,
+    textarea::placeholder {
+        color: #9A9A9A;
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    button {
+        margin-top: 10px;
+        color: black;
+        background-color: #ACD0D6;
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+        border: none;
+        padding: 10px 22px;
+    }
+
+    input {
+        background-color: white;
+        padding: 15px 20px;
+        font-family: "Arsenal SC";
+        font-size: 25px;
+        font-weight: 400;
+        border: none;
+    }
+}
+
+
+
+
+
+
+
+
 footer {
     background-color: #6F4E37;
     padding: 3vw 7vw;
