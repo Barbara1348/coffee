@@ -1,0 +1,148 @@
+.user_info {
+    padding: 7vw 7vw 6vw;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        align-self: center;
+        margin-bottom: 50px;
+    }
+}
+
+.info {
+    justify-content: space-between;
+    width: 45vw;
+}
+
+.photo {
+    gap: 45px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 450px;
+    }
+}
+
+.button {
+    padding: 15px 22px;
+}
+
+
+
+
+
+
+
+
+
+
+.card_info {
+    padding: 0 7vw 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    h2 {
+        align-self: center;
+    }
+}
+
+.card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/images/card.jpg);
+    background-repeat: no-repeat;
+    width: 628px;
+    height: 353px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: white;
+    }
+}
+
+h3,
+h4,
+h5 {
+    font-family: "Arsenal SC";
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.bonus {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.containers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bonus_ {
+    display: flex;
+    gap: 37px;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_card {
+    display: flex;
+    align-items: center;
+    gap: 10vw;
+}
+
+.level {
+    max-width: 27vw;
+}
+
+
+
+
+
+
+
+
+
+
+.orders_story {
+    padding: 0 7vw 6vw;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        align-self: center;
+    }
+}

@@ -7,8 +7,19 @@ main {
     gap: 50px;
 }
 
+
+
+
+
+
+
+
+
+
 form {
     width: 40%;
+    flex-direction: column;
+    gap: 10px;
 
     div {
         display: flex;

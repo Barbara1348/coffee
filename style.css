@@ -317,6 +317,8 @@ section {
 
 form { 
     max-width: 50%;
+    flex-direction: column;
+    gap: 10px;
 }
 
 

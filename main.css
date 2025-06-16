@@ -24,6 +24,7 @@ header {
     width: 100%;
     z-index: 1;
     backdrop-filter: blur(3px);
+    border-bottom: 1px solid rgba(111, 78, 55, 0.5);
 }
 
 nav {
@@ -94,8 +95,6 @@ a:hover {
 
 form {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
 
     input::placeholder,
     textarea::placeholder {
