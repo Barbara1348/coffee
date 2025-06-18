@@ -84,6 +84,19 @@ a:hover {
     transition: transform 0.5s ease;
 }
 
+span {
+    color: #6F4E37;
+}
+
+button {
+    color: black;
+    background-color: #ACD0D6;
+    font-family: "Arsenal SC";
+    font-size: 25px;
+    font-weight: 400;
+    border: none;
+    padding: 10px 22px;
+}
 
 
 

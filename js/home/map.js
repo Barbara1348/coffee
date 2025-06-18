@@ -13,7 +13,7 @@ function init() {
         {
             iconLayout: 'default#image',
             iconImageHref: '/assets/images/location.svg',
-            iconImageSize: [40, 40],
+            iconImageSize: [50, 50],
             iconImageOffset: [-20, -40]
         });
 

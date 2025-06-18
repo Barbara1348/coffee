@@ -91,6 +91,10 @@ section {
     .img {
         border-bottom: 1px solid #6F4E37;
         width: 100%;
+        height: 222px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: bottom;
     }
 
     p {
@@ -108,6 +112,10 @@ section {
         border: none;
         padding: 10px 22px;
         max-width: fit-content;
+    }
+
+    a {
+        transform-origin: left center;
     }
 }
 
@@ -201,10 +209,22 @@ section {
 #button_next {
     transform: scaleX(-1);
     right: 7vw;
+    cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
 #button_back {
     left: 7vw;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+#button_back:hover {
+    transform: scale(1.1);
+}
+
+#button_next:hover {
+    transform: scaleX(-1.1) scaleY(1.1);
 }
 
 .info {

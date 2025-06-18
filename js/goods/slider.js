@@ -1,7 +1,7 @@
-const button_next = document.getElementById("button_next");
-const button_back = document.getElementById("button_back");
 const slides = document.querySelector(".slides");
-const slideItems = document.querySelectorAll(".slides .slide");
+const slideItems = document.querySelectorAll(".slides .card");
+const button_back = document.getElementById("button_back");
+const button_next = document.getElementById("button_next");
 const indicatorsContainer = document.querySelector(".dots");
 
 let index = 0;
@@ -10,9 +10,9 @@ let index = 0;
  * Стилистика переключения слайдов
  */
 function updateSlider() {
-    slides.style.transform = `translateX(-${index * 51}%)`;
-    slides.style.transition = "transform 1s ease";
-    updateIndicators();
+    slides.style.transform = `translateX(-${index * 14.6}%)`;
+    slides.style.transition = "transform 0.8s ease";
+    updateIndicators(); 
 }
 
 /**
@@ -20,7 +20,7 @@ function updateSlider() {
  */
 button_back.addEventListener("click", () => {
     if (index === 0) {
-        index = slideItems.length - 2;
+        index = slideItems.length - 3;
     } else {
         index--;
     }
@@ -31,7 +31,7 @@ button_back.addEventListener("click", () => {
  * Кнопка переключения вперед
  */
 button_next.addEventListener("click", () => {
-    if (index === slideItems.length - 2) {
+    if (index === slideItems.length - 3) {
         index = 0;
     } else {
         index++;
@@ -43,7 +43,7 @@ button_next.addEventListener("click", () => {
  * Создание индикаторов
  */
 function createIndicators() {
-    for (let i = 0; i < slideItems.length - 1; i++) {
+    for (let i = 0; i < slideItems.length - 2; i++) {
         const indicator = document.createElement("div");
         indicator.classList.add("dot");
         if (i === 0) indicator.classList.add("active");
