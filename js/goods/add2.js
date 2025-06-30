@@ -155,7 +155,7 @@ class ProductOptionsManager {
         const cartManager = new CartManager();
         const cart = cartManager.getCart();
         cart.push(productData);
-        cartManager.saveCart(cart);
+        cartManager.saveCart(productData);
 
         alert('Товар добавлен в корзину!');
         window.location.href = '/bag/index.html';
@@ -182,12 +182,28 @@ class CartManager {
     }
 
     getCart() {
-        const cart = localStorage.getItem(this.cartKey);
-        return cart ? JSON.parse(cart) : [];
+        let data = localStorage.getItem(this.cartKey);
+        if(!data) data = {};
+        data = JSON.parse(data);
+
+        const usersManager = new UsersManager();
+        const id = usersManager.getCurrentUser();
+        
+        if(!data[id]) return [];
+        else return data[id];
     }
 
     saveCart(cart) {
-        localStorage.setItem(this.cartKey, JSON.stringify(cart));
+        let data = localStorage.getItem(this.cartKey);
+        if(!data) data = {};
+        data = JSON.parse(data);
+
+        const usersManager = new UsersManager();
+        const id = usersManager.getCurrentUser();
+        if(!data[id]) data[id] = [];
+        data[id].push(cart);
+
+        localStorage.setItem(this.cartKey, JSON.stringify(data));
     }
 
     displayCartItems() {

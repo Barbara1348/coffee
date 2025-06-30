@@ -15,6 +15,11 @@
         <a href="index.html">
             <img src="/assets/images/logo.svg" alt="Логотип кофейни">
         </a>
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <ul>
                 <a href="#section1">
@@ -33,6 +38,7 @@
                     <li>Вопросы</li>
                 </a>
             </ul>
+
             <div class="theme-toggle">
                 <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon" class="theme-icon active">
                 <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
@@ -40,6 +46,26 @@
             <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
             <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
+
+        <div class="mobile-nav" id="mobileNav">
+            <span class="close-mobile-nav" id="closeMobileNav">&times;</span>
+            <ul>
+                <li><a href="/index.html#section1">О нас</a></li>
+                <li><a href="/index.html#section2">Меню</a></li>
+                <li><a href="/index.html#section3">Отзывы</a></li>
+                <li><a href="/index.html#section4">Контакты</a></li>
+                <li><a href="/index.html#section5">Вопросы</a></li>
+            </ul>
+            <div class="mobile-nav-icons">
+                <div class="theme-toggle">
+                    <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon-mobile"
+                        class="theme-icon active">
+                    <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon-mobile" class="theme-icon">
+                </div>
+                <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
+                <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
+            </div>
+        </div>
     </header>
 
     <main>
@@ -377,10 +403,17 @@
         <div class="questions" id="section5">
             <h2>Вопросы</h2>
             <form action="">
-                <input type="email" placeholder="Введите email">
-                <textarea type="text" name="" id="" placeholder="Введите вопрос"></textarea>
-                <button type="submit">Отправить</button>
+                <input type="email" placeholder="Введите email" required>
+                <textarea type="text" name="" id="" placeholder="Введите вопрос" required></textarea>
+                <button type="submit" onclick="feedback(event)">Отправить</button>
             </form>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal_content">
+                <span class="close">&times;</span>
+                <p id="loginError"></p>
+            </div>
         </div>
     </main>
 
@@ -431,6 +464,10 @@
         </div>
     </footer>
 
+    <div class="scroll-to-top" id="scrollToTop">
+        <img src="/assets/images/arrow.svg" alt="Наверх">
+    </div>
+
     <script src="/js/home/heart.js"></script>
     <script src="/js/home/slider.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
@@ -441,6 +478,10 @@
     <script src="/js/goods/log_cart.js"></script>
     <script src="/js/home/mode.js"></script>
     <script src="/js/home/bread.js"></script>
+    <script src="/js/home/burger.js"></script>
+    <script src="/js/home/feedback.js"></script>
+    <script src="/js/home/scroll.js"></script>
+
 </body>
 
 </html>

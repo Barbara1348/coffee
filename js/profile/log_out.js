@@ -3,7 +3,6 @@
  */
 function logOut() {
     const usersManager = new UsersManager();
-    usersManager.logout();
     window.location.href = "/log/authorization/index.html";
 }
 

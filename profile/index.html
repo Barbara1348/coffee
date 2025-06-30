@@ -16,6 +16,11 @@
         <a href="/index.html">
             <img src="/assets/images/logo.svg" alt="Логотип кофейни">
         </a>
+        <div class="burger-menu" id="burgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <ul>
                 <a href="/index.html#section1">
@@ -34,16 +39,38 @@
                     <li>Вопросы</li>
                 </a>
             </ul>
+            
             <div class="theme-toggle">
                 <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon" class="theme-icon active">
                 <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
             </div>
             <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
-            <img src="/assets/images/account.svg" alt="Личный кабинет">
+            <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
+
+        <div class="mobile-nav" id="mobileNav">
+            <span class="close-mobile-nav" id="closeMobileNav">&times;</span>
+            <ul>
+                <li><a href="/index.html#section1">О нас</a></li>
+                <li><a href="/index.html#section2">Меню</a></li>
+                <li><a href="/index.html#section3">Отзывы</a></li>
+                <li><a href="/index.html#section4">Контакты</a></li>
+                <li><a href="/index.html#section5">Вопросы</a></li>
+            </ul>
+            <div class="mobile-nav-icons">
+                <div class="theme-toggle">
+                    <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon-mobile"
+                        class="theme-icon active">
+                    <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon-mobile" class="theme-icon">
+                </div>
+                <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
+                <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
+            </div>
+        </div>
     </header>
 
     <main>
+
         <div class="user_info">
             <h2>Личный кабинет</h2>
             <form id="formProfile">
@@ -55,8 +82,8 @@
                 <div class="info">
                     <input type="text" placeholder="Фамилия" id="surname">
                     <input type="text" placeholder="Имя" id="name">
-                    <input type="text" placeholder="Отчество" id="pathronymic" >
-                    <input type="tel" placeholder="Телефон" id="phone">
+                    <input type="text" placeholder="Отчество" id="pathronymic">
+                    <input type="number" placeholder="Телефон" id="phone">
                     <input type="email" placeholder="Email" id="email">
                     <input type="date" placeholder="Дата рождения" id="birth">
                     <input type="text" placeholder="Город" id="city">
@@ -103,9 +130,7 @@
             </div>
         </div>
 
-        <div class="orders_story">
-            <h2>История заказов</h2>
-        </div>
+        
     </main>
 
     <footer>
@@ -161,7 +186,8 @@
     <script src="/js/profile/edit.js"></script>
     <script src="/js/home/heart.js"></script>
     <script src="/js/goods/log_cart.js"></script>
-    <script src="/js/goods/log_cart.js"></script>
+    <script src="/js/home/mode.js"></script>
+    <script src="/js/home/burger.js"></script>
 </body>
 
 </html>

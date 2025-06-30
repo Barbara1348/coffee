@@ -30,12 +30,13 @@ authForm.addEventListener("submit", (e) => {
         userManager.setCurrentUser(foundUser.id);
         errorElem.innerText = "Вы успешно авторизовались!";
         modal.style.display = "block";
+        setTimeout(() => {
+            window.location.href = "/profile/index.html";
+        }, 1500);
         Modal();
     }
 
-    setTimeout(() => {
-        window.location.href = "/profile/index.html";
-    }, 1500);
+
 });
 
 /**

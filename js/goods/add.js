@@ -31,8 +31,8 @@ class ProductOptionsManager {
 
     getSummary() {
         let sum = 0;
-        const basePrice = 150; 
-        
+        const basePrice = 150;
+
         sum += basePrice;
 
         const coconutMilk = document.querySelector('input[type="checkbox"][id="drink_crit_1"]:checked');
@@ -60,29 +60,29 @@ class ProductOptionsManager {
     }
 
     initCheckboxes() {
-    const form = document.querySelector('form');
-    if (!form) return;
+        const form = document.querySelector('form');
+        if (!form) return;
 
-    this.restoreOptions();
-    this.updateButtonPrice(); // Инициализируем цену при загрузке
+        this.restoreOptions();
+        this.updateButtonPrice(); // Инициализируем цену при загрузке
 
-    document.querySelectorAll('.category input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', (e) => {
-            this.handleCheckboxChange(e);
-            this.updateButtonPrice(); // Обновляем цену при изменении
+        document.querySelectorAll('.category input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                this.handleCheckboxChange(e);
+                this.updateButtonPrice(); // Обновляем цену при изменении
+            });
         });
-    });
 
-    form.addEventListener('submit', (e) => this.handleFormSubmit(e));
-}
-
-updateButtonPrice() {
-    const button = document.getElementById('addToCart');
-    if (button) {
-        const summary = this.getSummary();
-        button.querySelector('.summary').textContent = `${summary} ₽`;
+        form.addEventListener('submit', (e) => this.handleFormSubmit(e));
     }
-}
+
+    updateButtonPrice() {
+        const button = document.getElementById('addToCart');
+        if (button) {
+            const summary = this.getSummary();
+            button.querySelector('.summary').textContent = `${summary} ₽`;
+        }
+    }
 
     initCheckboxes() {
         const form = document.querySelector('form');
@@ -148,8 +148,8 @@ updateButtonPrice() {
         });
     }
 
-    handleFormSubmit(event) {
 
+    handleFormSubmit(event) {
         event.preventDefault();
         this.saveCurrentOptions();
 
@@ -166,12 +166,30 @@ updateButtonPrice() {
         };
 
         const cartManager = new CartManager();
-        const cart = cartManager.getCart();
-        cart.push(productData);
-        cartManager.saveCart(cart);
+        cartManager.saveCart(productData);
 
-        alert('Товар добавлен в корзину!');
-        window.location.href = '/bag/index.html';
+        const modal = document.getElementById("myModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        if (span) {
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        }
+
+        if (modal) {
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        const errorElem = document.getElementById("loginError");
+        errorElem.innerText = "Товар добавлен в корзину!";
+        document.getElementById("myModal").style.display = "block";
+        return false; // Останавливаем выполнение функции
+
     }
 }
 
@@ -195,12 +213,28 @@ class CartManager {
     }
 
     getCart() {
-        const cart = localStorage.getItem(this.cartKey);
-        return cart ? JSON.parse(cart) : [];
+        let data = localStorage.getItem(this.cartKey);
+        if (!data) data = {};
+        data = JSON.parse(data);
+
+        const usersManager = new UsersManager();
+        const id = usersManager.getCurrentUser();
+
+        if (!data[id]) return [];
+        else return data[id];
     }
 
     saveCart(cart) {
-        localStorage.setItem(this.cartKey, JSON.stringify(cart));
+        let data = localStorage.getItem(this.cartKey);
+        if (!data) data = {};
+        data = JSON.parse(data);
+
+        const usersManager = new UsersManager();
+        const id = usersManager.getCurrentUser();
+        if (!data[id]) data[id] = [];
+        data[id].push(cart);
+
+        localStorage.setItem(this.cartKey, JSON.stringify(data));
     }
 
     displayCartItems() {
@@ -311,4 +345,22 @@ if (document.querySelector('.container')) {
     document.addEventListener('DOMContentLoaded', () => {
         const cartManager = new CartManager();
     });
+}
+
+/**
+ * Функция закрытия модального окна
+ */
+function Modal() {
+
+    // Закрываем модальное окно при клике на крестик
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Закрываем модальное окно при клике вне его области
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 }
