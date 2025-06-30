@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
+    <title>Корзина</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/assets/font/index.html">
-    <link rel="stylesheet" href="/log in/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -32,26 +34,59 @@
                     <li>Вопросы</li>
                 </a>
             </ul>
-            <img src="/assets/images/bag.svg" alt="Корзина">
-            <img src="/assets/images/account.svg" alt="Личный кабинет">
+            <div class="theme-toggle">
+                <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon" class="theme-icon active">
+                <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
+            </div>
+            <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
+            <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
     </header>
 
     <main>
-        <h2>Регистрация</h2>
-        <form action="">
-            <input type="text" placeholder="Фамилия">
-            <input type="text" placeholder="Имя">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Пароль">
-            <input type="password" placeholder="Подтверждение пароля">
-            <div>
-                <input type="checkbox" id="checkbox">
-                <p>Я согласен с <span>Политикой конфиденциальности</span> и принимаю <span>Пользовательское соглашение</span></p>
+        <h2>Корзина</h2>
+        <div class="container">
+            <div class="drinks">
+                <h3>Напитки</h3>
+                <div class="container_drinks"></div>
             </div>
-            <button type="submit">Зерегистрироваться</button>
-            <label for="">Уже есть аккаунт?&nbsp;<span>Войти</span></label>
-        </form>
+            <div class="food">
+                <h3>Блюда</h3>
+                <div class="container_food"></div>
+            </div>
+        </div>
+        <aside>
+            <h3>Оплата</h3>
+            <form action="">
+                <div class="form">
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>Банковской картой</p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>СБП</p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>Наличными</p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p>Раздельным счетом</p>
+                    </div>
+                </div>
+
+
+                <div class="rows">
+                    <div class="row">
+                        <h4>К оплате:</h4>
+                    </div>
+                </div>
+                <button type="submit">Оплатить</button>
+            </form>
+
+        </aside>
     </main>
 
     <footer>
@@ -101,5 +136,12 @@
         </div>
     </footer>
 
+    <script src="/js/class.js"></script>
+    <script src="/js/goods/add.js"></script>
+    <script src="/js/goods/log_cart.js"></script>
+    <script src="/js/goods/log_cart.js"></script>
+    <script src="/js/log/log.js"></script>
+
 </body>
+
 </html>

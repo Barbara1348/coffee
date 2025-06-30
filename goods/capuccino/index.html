@@ -34,8 +34,12 @@
                     <li>Вопросы</li>
                 </a>
             </ul>
-            <img src="/assets/images/bag.svg" alt="Корзина">
-            <img src="/assets/images/account.svg" alt="Личный кабинет">
+            <div class="theme-toggle">
+                <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon" class="theme-icon active">
+                <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
+            </div>
+            <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
+            <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
     </header>
 
@@ -73,7 +77,7 @@
             <h2>Дополнительно</h2>
             <div class="containers">
                 <form action="">
-                    <div class="category">
+                    <div class="category" data-category="milk">
                         <h5>Молоко</h5>
                         <div class="container">
                             <div class="checkbox">
@@ -81,36 +85,36 @@
                                 <p>Классическое</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Кокосовое</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Банановое</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Фундучное</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Миндальное</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Овсяное</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Рисовое</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_1">
                                 <p>Фисташковое</p>
                             </div>
                         </div>
                     </div>
-                    <div class="category">
+                    <div class="category" data-category="additives">
                         <h5>Добавки</h5>
                         <div class="container">
                             <div class="checkbox">
@@ -118,57 +122,57 @@
                                 <p>Нет</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Корица</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Взбитые сливки</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Карамельный сироп</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Имбирь</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Маршмеллоу</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Кардамон</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_2">
                                 <p>Шоколадная крошка</p>
                             </div>
                         </div>
                     </div>
-                    <div class="category">
+                    <div class="category" data-category="volume">
                         <h5>Объем</h5>
                         <div class="container">
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_3_s">
                                 <p>S (0,3 л)</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_3_m">
                                 <p>M (0,4 л)</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_3_l">
                                 <p>L (0,5 л)</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="drink_crit_3_xl">
                                 <p>XL (0,6 л)</p>
                             </div>
                         </div>
                     </div>
-                    <button type="submit">В корзину <div class="summary"></div></button>
+                    <button type="submit" id="addToCart">В корзину</button>
                 </form>
                 <div class="category">
                     <h5>Дополнительные блюда</h5>
@@ -291,7 +295,11 @@
         </div>
     </footer>
 
+    <script src="/js/class.js"></script>
+    <script src="/js/log/log.js"></script>
+    <script src="/js/goods/add.js"></script>
     <script src="/js/home/heart.js"></script>
+    <script src="/js/goods/log_cart.js"></script>
 </body>
 
 </html>

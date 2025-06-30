@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Регистрация</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/assets/font/index.html">
+    <link rel="stylesheet" href="/log/style.css">
 </head>
 
 <body>
@@ -39,72 +39,36 @@
                 <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
             </div>
             <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
-            <img src="/assets/images/account.svg" alt="Личный кабинет">
+            <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
     </header>
 
     <main>
-        <div class="user_info">
-            <h2>Личный кабинет</h2>
-            <form id="formProfile">
-                <div class="photo">
-                    <img src="/assets/images/profile.jpg" alt="">
-                    <button class="button" type="submit" onclick="edit()">Изменить</button>
-                    <button class="button" type="submit" id="logOut">Выйти</button>
-                </div>
-                <div class="info">
-                    <input type="text" placeholder="Фамилия" id="surname">
-                    <input type="text" placeholder="Имя" id="name">
-                    <input type="text" placeholder="Отчество" id="pathronymic" >
-                    <input type="tel" placeholder="Телефон" id="phone">
-                    <input type="email" placeholder="Email" id="email">
-                    <input type="date" placeholder="Дата рождения" id="birth">
-                    <input type="text" placeholder="Город" id="city">
-                </div>
-            </form>
-
-            <div id="myModal" class="modal">
-                <div class="modal_content">
-                    <span class="close">&times;</span>
-                    <p id="loginError"></p>
-                </div>
+        <h2>Регистрация</h2>
+        <form id="registForm" action="">
+            <input type="text" placeholder="Фамилия" id="surname" required>
+            <input type="text" placeholder="Имя" id="name" required>
+            <input type="email" placeholder="Email" id="email" required >
+            <input type="password" placeholder="Пароль" id="password" required>
+            <input type="password" placeholder="Подтверждение пароля" id="password_confirm" required>
+            <div>
+                <input type="checkbox" id="checkbox">
+                <p>Я согласен с <span>Политикой конфиденциальности</span> и принимаю <span>Пользовательское
+                        соглашение</span></p>
             </div>
-        </div>
+            <button type="submit">Зерегистрироваться</button>
+            <label for="">Уже есть аккаунт?&nbsp;
+                <a href="/log/authorization/index.html">
+                    <span>Войти</span>
+                </a>
+            </label>
+        </form>
 
-        <div class="card_info">
-            <h2>Карта лояльности</h2>
-            <div class="about_card">
-                <div class="card">
-                    <div class="header">
-                        <h2>Небо и Земля</h2>
-                        <img src="/assets/images/logo_card.svg" alt="">
-                    </div>
-                    <div class="containers">
-                        <div class="container">
-                            <h4>Балакина Варвара</h4>
-                            <h3>8800 5553 5358 8005</h3>
-                        </div>
-                        <div class="bonus_">
-                            <div class="container">
-                                <h3>Баланс карты</h3>
-                                <div class="bonus">
-                                    <h4>350</h4>
-                                    <h5>бонусов</h5>
-                                </div>
-                            </div>
-                            <img src="/assets/images/qr.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="level">
-                    <h2>2 УРОВЕНЬ</h2>
-                    <h3>Уровень вашей карты дает вам доступ к клиентской скидке 5%</h3>
-                </div>
+        <div id="myModal" class="modal">
+            <div class="modal_content">
+                <span class="close">&times;</span>
+                <p id="loginError"></p>
             </div>
-        </div>
-
-        <div class="orders_story">
-            <h2>История заказов</h2>
         </div>
     </main>
 
@@ -156,12 +120,9 @@
     </footer>
 
     <script src="/js/class.js"></script>
-    <script src="/js/profile/profile.js"></script>
-    <script src="/js/profile/log_out.js"></script>
-    <script src="/js/profile/edit.js"></script>
-    <script src="/js/home/heart.js"></script>
+    <script src="/js/log/login2.js"></script>
     <script src="/js/goods/log_cart.js"></script>
-    <script src="/js/goods/log_cart.js"></script>
+    <script src="/js/log/log.js"></script>
 </body>
 
 </html>

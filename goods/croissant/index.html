@@ -34,8 +34,12 @@
                     <li>Вопросы</li>
                 </a>
             </ul>
-            <img src="/assets/images/bag.svg" alt="Корзина">
-            <img src="/assets/images/account.svg" alt="Личный кабинет">
+            <div class="theme-toggle">
+                <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon" class="theme-icon active">
+                <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
+            </div>
+            <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
+            <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
     </header>
 
@@ -66,19 +70,19 @@
                         <h5>Масса</h5>
                         <div class="container">
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="food_crit_100">
                                 <p>100 гр</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="food_crit_200">
                                 <p>200 гр</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="food_crit_300">
                                 <p>300 гр</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="food_crit_400">
                                 <p>400 гр</p>
                             </div>
                         </div>
@@ -91,11 +95,11 @@
                                 <p>Классический</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="food_crit_2_veget">
                                 <p>Вегетарианский</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" id="food_crit_2_vegan">
                                 <p>Веганский</p>
                             </div>
                         </div>
@@ -355,9 +359,13 @@
             </div>
         </div>
     </footer>
-
+    
+    <script src="/js/log/log.js"></script>
+    <script src="/js/class.js"></script>
     <script src="/js/home/heart.js"></script>
     <script src="/js/goods/slider.js"></script>
+    <script src="/js/goods/add2.js"></script>
+    <script src="/js/goods/log_cart.js"></script>
 </body>
 
 </html>

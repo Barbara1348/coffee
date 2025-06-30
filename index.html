@@ -33,8 +33,12 @@
                     <li>Вопросы</li>
                 </a>
             </ul>
-            <img src="/assets/images/bag.svg" alt="Корзина">
-            <img src="/assets/images/account.svg" alt="Личный кабинет">
+            <div class="theme-toggle">
+                <img src="/assets/images/moon.svg" alt="Темная тема" id="moon-icon" class="theme-icon active">
+                <img src="/assets/images/sun.svg" alt="Светлая тема" id="sun-icon" class="theme-icon">
+            </div>
+            <img src="/assets/images/bag.svg" alt="Корзина" onclick="cart()">
+            <img src="/assets/images/account.svg" alt="Личный кабинет" onclick="login()">
         </nav>
     </header>
 
@@ -426,10 +430,17 @@
             </div>
         </div>
     </footer>
+
     <script src="/js/home/heart.js"></script>
     <script src="/js/home/slider.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
     <script src="/js/home/map.js"></script>
+    <script src="/js/class.js"></script>
+    <script src="/js/log/log.js"></script>
+    <script src="/js/log/login.js"></script>
+    <script src="/js/goods/log_cart.js"></script>
+    <script src="/js/home/mode.js"></script>
+    <script src="/js/home/bread.js"></script>
 </body>
 
 </html>
