@@ -3,6 +3,7 @@
  */
 function logOut() {
     const usersManager = new UsersManager();
+    localStorage.removeItem("newCurrentUser");
     window.location.href = "/log/authorization/index.html";
 }
 

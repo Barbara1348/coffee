@@ -342,3 +342,54 @@ form {
 }
 
 
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    nav img {
+        width: 4vw;
+    }
+
+    nav ul li {
+        font-size: 22px;
+    }
+
+    section h1 {
+        font-size: 35px;
+    }
+
+    .about_us {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .text_about_us {
+        max-width: 70vw;
+    }
+
+    .about {
+        max-width: 70vw;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .slide p {
+        font-size: 15px;
+    }
+
+    .slide h3 {
+        font-size: 20px;
+    }
+
+    .img_f {
+        min-width: 10vw;
+    }
+}
+

@@ -48,6 +48,7 @@ function heart(cardId) {
             currentUser.IDheart.splice(index, 1);
             userManager.edit(currentUser.id, currentUser);
             userManager.save();
+
         }
     }
 }

@@ -54,9 +54,13 @@ input[type="checkbox"] {
     position: relative;
 }
 
+input[type="checkbox"]:checked {
+    background-color: #ACD0D6;
+}
+
 input[type="checkbox"]:checked::before {
     content: url(/assets/images/check.svg);
     position: absolute;
-    left: 3px;
-    top: 9px;
+    left: 8px;
+    top: 8px;
 }
